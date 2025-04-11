@@ -1,4 +1,4 @@
-runTest:
+test:
 	@./*_test
 
 clear:
