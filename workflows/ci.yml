@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: runTest
-        run: make runTest
+        run: make test
 
       - name: checkFormat
         run: make cFmt
