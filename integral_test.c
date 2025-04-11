@@ -34,8 +34,8 @@ void integral_test_3() {
 
 int main() {
   integral_test_1();
-  // integral_test_2();
-  // integral_test_3();
+  integral_test_2();
+  integral_test_3();
   return 0;
 }
 
