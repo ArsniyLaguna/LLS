@@ -10,8 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: buildTest
-        run: make test_find_roots
         
       - name: test
         run: make test
