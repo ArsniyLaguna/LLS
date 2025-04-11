@@ -17,5 +17,5 @@ roots_test: roots_test.o roots.a
 	gcc -g -o roots_test roots_test.o roots.a  -lm
 
 
-test: roots_test
+test_find_roots: roots_test
 	./roots_test
