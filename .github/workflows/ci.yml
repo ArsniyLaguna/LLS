@@ -10,6 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: checkFormat
+        run: make fmt
         
       - name: test
         run: make test
