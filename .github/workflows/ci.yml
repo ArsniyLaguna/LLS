@@ -11,8 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: runTest
+      - name: test
         run: make test
-
       - name: checkFormat
         run: make cFmt
