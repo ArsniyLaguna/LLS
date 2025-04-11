@@ -10,12 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-    - name: format
-    run: fmt
+      
+      - name: format
+        run: fmt
       - name: test
         run: make test
-    - name: check_format
-    run: cFmt
+      - name: check_format
+        run: cFmt
 
         
