@@ -1,4 +1,4 @@
-all: list_test
+test: list_test
 
 list_test: list.o test_list.o
 	$(CC) $(CFLAGS) -o $@ $^
@@ -9,8 +9,6 @@ list.o: list.c list.h
 test_list.o: test_list.c list.h
 	$(CC) $(CFLAGS) -c $<
 
-test:
-	@./list_test
 
 clear:
 	@rm -rf *.o *.a list_test
