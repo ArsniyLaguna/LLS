@@ -1,6 +1,3 @@
-test:
-	@./*_test
-
 clear:
 	@rm -rf *.o *.a *_test
 
