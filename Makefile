@@ -1,17 +1,19 @@
-test: list_test
-
-list_test: list.o test_list.o
-	$(CC) $(CFLAGS) -o $@ $^
+test: test_list
 
 list.o: list.c list.h
-	$(CC) $(CFLAGS) -c $<
+	gcc -g -c list.c -o list.o
+
+list.a: list.o
+	ar rc list.a list.o
 
 test_list.o: test_list.c list.h
-	$(CC) $(CFLAGS) -c $<
+	gcc -g -c test_list.c -o test_list.o
 
+test_list: test_list.o list.a
+	gcc -g -o test_list test_list.o list.a 
 
 clear:
-	@rm -rf *.o *.a list_test
+	@rm -rf *.o *.a test_list
 
 fmt:
 	@clang-format -style=LLVM -i *.c *.h
