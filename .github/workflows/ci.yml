@@ -17,5 +17,5 @@ jobs:
       - name: checkFormat
         run: make cFmt
 
-      - name: build and test
+      - name: buildandtest
         run: make test
