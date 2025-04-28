@@ -13,7 +13,7 @@ test_list: test_list.o list.a
 	gcc -g -o test_list test_list.o list.a 
 
 clear:
-	@rm -rf *.o *.a test_list
+	@rm -rf *.o *.a *_test
 
 fmt:
 	@clang-format -style=LLVM -i *.c *.h
