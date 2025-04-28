@@ -1,45 +1,45 @@
 
-#include <stdio.h>
-#include <assert.h>
 #include "list.h"
+#include <assert.h>
+#include <stdio.h>
 
 void testLinkedList() {
 
-    LinkedList* list = createLinkedList();
-    assert(getSize(list) == 0);
+  LinkedList *list = createLinkedList();
+  assert(getSize(list) == 0);
 
-    insertAtBeginning(list, 10);
-    assert(getSize(list) == 1);
-    assert(getAtPosition(list, 0) == 10);
-    
-    insertAtEnd(list, 20);
-    assert(getSize(list) == 2);
-    assert(getAtPosition(list, 1) == 20);
+  insertAtBeginning(list, 10);
+  assert(getSize(list) == 1);
+  assert(getAtPosition(list, 0) == 10);
 
-    insertAtPosition(list, 15, 1);
-    assert(getSize(list) == 3);
-    assert(getAtPosition(list, 1) == 15);
+  insertAtEnd(list, 20);
+  assert(getSize(list) == 2);
+  assert(getAtPosition(list, 1) == 20);
 
-    assert(getAtPosition(list, 0) == 10);
-    assert(getAtPosition(list, 1) == 15);
-    assert(getAtPosition(list, 2) == 20);
+  insertAtPosition(list, 15, 1);
+  assert(getSize(list) == 3);
+  assert(getAtPosition(list, 1) == 15);
 
-    assert(deleteNode(list, 1) == 15);
-    assert(getSize(list) == 2);
-    assert(getAtPosition(list, 1) == 20);
+  assert(getAtPosition(list, 0) == 10);
+  assert(getAtPosition(list, 1) == 15);
+  assert(getAtPosition(list, 2) == 20);
 
-    assert(deleteNode(list, 0) == 10);
-    assert(getSize(list) == 1);
+  assert(deleteNode(list, 1) == 15);
+  assert(getSize(list) == 2);
+  assert(getAtPosition(list, 1) == 20);
 
-    assert(deleteNode(list, 0) == 20);
-    assert(getSize(list) == 0);
+  assert(deleteNode(list, 0) == 10);
+  assert(getSize(list) == 1);
 
-    freeLinkedList(list);
-    
-    printf("All tests passed!\n");
+  assert(deleteNode(list, 0) == 20);
+  assert(getSize(list) == 0);
+
+  freeLinkedList(list);
+
+  printf("All tests passed!\n");
 }
 
 int main() {
-    testLinkedList();
-    return 0;
+  testLinkedList();
+  return 0;
 }
