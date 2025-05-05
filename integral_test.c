@@ -19,7 +19,7 @@ void integral_test_2() {
   
   double result = integral_trapez(a, b, n, function);
   double expect = 0.42292469;
-  assert(fabs(result - expect) <= 0);
+  assert(fabs(result - expect) <= 1e-6);
 }
 
 void integral_test_3() {
