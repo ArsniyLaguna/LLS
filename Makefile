@@ -1,5 +1,5 @@
 clear:
-	rm -rf *.o *.a *_test
+	@rm -rf *.o *.a *_test
 
 
 fmt:
