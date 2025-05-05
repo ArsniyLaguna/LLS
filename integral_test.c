@@ -38,6 +38,3 @@ int main() {
   integral_test_3();
   return 0;
 }
-
-
-
